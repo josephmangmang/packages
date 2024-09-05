@@ -13,6 +13,7 @@ import io.flutter.plugins.camerax.GeneratedCameraXLibrary.FocusMeteringActionHos
 import io.flutter.plugins.camerax.GeneratedCameraXLibrary.MeteringPointInfo;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Host API implementation for {@link FocusMeteringAction}.
@@ -62,6 +63,7 @@ public class FocusMeteringActionHostApiImpl implements FocusMeteringActionHostAp
         }
       }
 
+      focusMeteringActionBuilder.setAutoCancelDuration(1, TimeUnit.SECONDS);
       if (disableAutoCancel != null && disableAutoCancel == true) {
         focusMeteringActionBuilder.disableAutoCancel();
       }
